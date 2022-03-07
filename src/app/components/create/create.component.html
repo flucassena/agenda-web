@@ -1,0 +1,24 @@
+<mat-card>
+    <mat-card-title>New contact</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Name" [(ngModel)]="contact.name" name="name">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Phoone" [(ngModel)]="contact.phone" name="phone">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Category</mat-label>
+            <mat-select [(ngModel)]="contact.category" name="category">
+                <mat-option value="0">Family</mat-option>
+                <mat-option value="1">Friend</mat-option>
+                <mat-option value="2">Outhers</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createContact()" color="primary">Salvar</button>   
+    <button mat-raised-button (click)="cancel()">Cancelar</button>
+
+</mat-card>
